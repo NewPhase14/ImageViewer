@@ -20,7 +20,7 @@
                      <children>
                         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../Downloads/icons8-picture-50.png" />
+                              <Image url="@../icons/All-pictures.png" />
                            </image>
                         </ImageView>
                         <Label text="All Photos" />
@@ -33,13 +33,13 @@
                      <children>
                         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../Downloads/icons8-folder-50.png" />
+                              <Image url="@../icons/Folder.png" />
                            </image>
                         </ImageView>
                         <Label text="Casper's 25th birthday" />
                         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../Downloads/icons8-arrow-down-50.png" />
+                              <Image url="@../icons/Arrow-down.png" />
                            </image>
                         </ImageView>
                      </children>
@@ -48,24 +48,7 @@
                      <children>
                         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../Downloads/icons8-picture-50.png" />
-                           </image>
-                        </ImageView>
-                        <Label text="Casper's ass">
-                           <HBox.margin>
-                              <Insets />
-                           </HBox.margin>
-                        </Label>
-                     </children>
-                     <VBox.margin>
-                        <Insets left="30.0" />
-                     </VBox.margin>
-                  </HBox>
-                  <HBox spacing="10.0">
-                     <children>
-                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../../Downloads/icons8-picture-50.png" />
+                              <Image url="@../icons/Picture.png" />
                            </image>
                         </ImageView>
                         <Label text="Casper's ass">
@@ -82,7 +65,7 @@
                      <children>
                         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../Downloads/icons8-picture-50.png" />
+                              <Image url="@../icons/Picture.png" />
                            </image>
                         </ImageView>
                         <Label text="Casper's ass">
@@ -99,7 +82,7 @@
                      <children>
                         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../Downloads/icons8-picture-50.png" />
+                              <Image url="@../icons/Picture.png" />
                            </image>
                         </ImageView>
                         <Label text="Casper's ass">
@@ -116,7 +99,7 @@
                      <children>
                         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../Downloads/icons8-picture-50.png" />
+                              <Image url="@../icons/Picture.png" />
                            </image>
                         </ImageView>
                         <Label text="Casper's ass">
@@ -133,7 +116,24 @@
                      <children>
                         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../Downloads/icons8-picture-50.png" />
+                              <Image url="@../icons/Picture.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="Casper's ass">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/Picture.png" />
                            </image>
                         </ImageView>
                         <Label text="Casper's ass">
@@ -150,13 +150,13 @@
                      <children>
                         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../Downloads/icons8-folder-50.png" />
+                              <Image url="@../icons/Folder.png" />
                            </image>
                         </ImageView>
                         <Label text="Casper's 25th birthday" />
                         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../Downloads/icons8-arrow-down-50.png" />
+                              <Image url="@../icons/Arrow-down.png" />
                            </image>
                         </ImageView>
                      </children>
@@ -165,24 +165,7 @@
                      <children>
                         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../Downloads/icons8-picture-50.png" />
-                           </image>
-                        </ImageView>
-                        <Label text="Casper's ass">
-                           <HBox.margin>
-                              <Insets />
-                           </HBox.margin>
-                        </Label>
-                     </children>
-                     <VBox.margin>
-                        <Insets left="30.0" />
-                     </VBox.margin>
-                  </HBox>
-                  <HBox spacing="10.0">
-                     <children>
-                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../../Downloads/icons8-picture-50.png" />
+                              <Image url="@../icons/Picture.png" />
                            </image>
                         </ImageView>
                         <Label text="Casper's ass">
@@ -199,7 +182,7 @@
                      <children>
                         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../Downloads/icons8-picture-50.png" />
+                              <Image url="@../icons/Picture.png" />
                            </image>
                         </ImageView>
                         <Label text="Casper's ass">
@@ -216,7 +199,7 @@
                      <children>
                         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../Downloads/icons8-picture-50.png" />
+                              <Image url="@../icons/Picture.png" />
                            </image>
                         </ImageView>
                         <Label text="Casper's ass">
@@ -233,7 +216,7 @@
                      <children>
                         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../Downloads/icons8-picture-50.png" />
+                              <Image url="@../icons/Picture.png" />
                            </image>
                         </ImageView>
                         <Label text="Casper's ass">
@@ -250,7 +233,7 @@
                      <children>
                         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../Downloads/icons8-picture-50.png" />
+                              <Image url="@../icons/Picture.png" />
                            </image>
                         </ImageView>
                         <Label text="Casper's ass">
@@ -260,20 +243,37 @@
                         </Label>
                      </children>
                      <VBox.margin>
-                        <Insets bottom="15.0" left="30.0" />
+                        <Insets left="30.0" />
                      </VBox.margin>
                   </HBox>
                   <HBox spacing="10.0">
                      <children>
                         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../Downloads/icons8-folder-50.png" />
+                              <Image url="@../icons/Picture.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="Casper's ass">
+                           <HBox.margin>
+                              <Insets bottom="15.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/Folder.png" />
                            </image>
                         </ImageView>
                         <Label text="Casper's 25th birthday" />
                         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../Downloads/icons8-arrow-down-50.png" />
+                              <Image url="@../icons/Arrow-down.png" />
                            </image>
                         </ImageView>
                      </children>
@@ -282,24 +282,7 @@
                      <children>
                         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../Downloads/icons8-picture-50.png" />
-                           </image>
-                        </ImageView>
-                        <Label text="Casper's ass">
-                           <HBox.margin>
-                              <Insets />
-                           </HBox.margin>
-                        </Label>
-                     </children>
-                     <VBox.margin>
-                        <Insets left="30.0" />
-                     </VBox.margin>
-                  </HBox>
-                  <HBox spacing="10.0">
-                     <children>
-                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../../Downloads/icons8-picture-50.png" />
+                              <Image url="@../icons/Picture.png" />
                            </image>
                         </ImageView>
                         <Label text="Casper's ass">
@@ -316,7 +299,7 @@
                      <children>
                         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../Downloads/icons8-picture-50.png" />
+                              <Image url="@../icons/Picture.png" />
                            </image>
                         </ImageView>
                         <Label text="Casper's ass">
@@ -333,7 +316,7 @@
                      <children>
                         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../Downloads/icons8-picture-50.png" />
+                              <Image url="@../icons/Picture.png" />
                            </image>
                         </ImageView>
                         <Label text="Casper's ass">
@@ -350,7 +333,7 @@
                      <children>
                         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../Downloads/icons8-picture-50.png" />
+                              <Image url="@../icons/Picture.png" />
                            </image>
                         </ImageView>
                         <Label text="Casper's ass">
@@ -367,7 +350,24 @@
                      <children>
                         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../Downloads/icons8-picture-50.png" />
+                              <Image url="@../icons/Picture.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="Casper's ass">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/Picture.png" />
                            </image>
                         </ImageView>
                         <Label text="Casper's ass">
