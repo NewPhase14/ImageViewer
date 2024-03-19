@@ -394,9 +394,6 @@
          </padding>
       </ScrollPane>
    </left>
-   <center>
-      <ImageView fitHeight="150.0" fitWidth="650.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
-   </center>
    <top>
       <HBox fx:id="hBoxTopBar" prefHeight="35.0" prefWidth="900.0" styleClass="title-bar" BorderPane.alignment="CENTER">
          <children>
