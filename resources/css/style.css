@@ -1,6 +1,15 @@
 .background {
     -fx-background-color: #2F1E63;
-    /*-fx-background-radius: 20;*/
+    -fx-background-radius: 10;
+}
+
+.title-bar {
+    -fx-background-color: #4A4453;
+    -fx-background-radius: 10 10 0 0;
+}
+
+.title-bar-text {
+    -fx-fill: #ffffff;
 }
 
 .label {
@@ -8,6 +17,51 @@
     -fx-text-fill: white;
     -fx-font-size: 14;
 }
+
+.close-button {
+    -fx-background-radius: 0 10 0 0;
+    -fx-background-color: #4A4453;
+}
+
+.close-button:hover {
+    -fx-background-color: red;
+}
+
+.minimize-button {
+    -fx-background-color: #4A4453;
+    -fx-background-radius: 0 0 0 0;
+}
+
+.minimize-button:hover {
+    -fx-background-color: #b9b9b9;
+}
+
+.add-image{
+    -fx-background-color: #4A4453;
+    -fx-text-fill: #ffffff;
+}
+
+.add-image:hover{
+    -fx-background-color: #373140;
+}
+
+.settings {
+    -fx-background-color: #4A4453;
+    -fx-text-fill: #ffffff;
+}
+
+.settings:hover{
+    -fx-background-color: #373140;
+}
+
+.searchbar{
+    -fx-background-color: #706A79;
+    -fx-background-radius: 5;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-radius: 5;
+}
+
 
 .scroll-pane > .viewport {
     -fx-background-color: transparent;
