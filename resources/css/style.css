@@ -36,21 +36,12 @@
     -fx-background-color: #b9b9b9;
 }
 
-.add-image{
+.topbar-buttons{
     -fx-background-color: #4A4453;
     -fx-text-fill: #ffffff;
 }
 
-.add-image:hover{
-    -fx-background-color: #373140;
-}
-
-.settings {
-    -fx-background-color: #4A4453;
-    -fx-text-fill: #ffffff;
-}
-
-.settings:hover{
+.topbar-buttons:hover{
     -fx-background-color: #373140;
 }
 
@@ -62,6 +53,14 @@
     -fx-border-radius: 5;
 }
 
+.sidebar-buttons{
+    -fx-background-color: #4A4453;
+    -fx-text-fill: #ffffff;
+}
+
+.sidebar-buttons:hover{
+    -fx-background-color: #373140;
+}
 
 .scroll-pane > .viewport {
     -fx-background-color: transparent;
