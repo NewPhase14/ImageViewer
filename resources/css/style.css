@@ -27,6 +27,12 @@
     -fx-font-size: 14;
 }
 
+.label-secondary {
+    -fx-background-color: #2F1E63;
+    -fx-text-fill: white;
+    -fx-font-size: 14;
+}
+
 .close-button {
     -fx-background-radius: 0 10 0 0;
     -fx-background-color: #4A4453;
@@ -77,11 +83,14 @@
 
 .scroll-pane{
     -fx-background-color: #4A4453;
-    /*-fx-background-radius: 20 0 0 20;*/
+}
+
+.image-scroll-pane {
+    -fx-background-color: #2F1E63;
 }
 
 .scroll-bar:vertical {
-    -fx-background-color: #4A4453;
+    -fx-background-color: transparent;
     -fx-pref-height: 0;
     -fx-padding: 0;
 }
@@ -107,4 +116,16 @@
 
 .scroll-bar:vertical > .increment-button > .increment-arrow {
     -fx-padding: 0 0 0 0;
+}
+
+.image-buttons {
+    -fx-background-color: #2F1E63;
+}
+
+.image-buttons:hover {
+    -fx-background-color: #251950;
+}
+
+.image-background{
+    -fx-background-color: #2F1E63;
 }
