@@ -1,5 +1,14 @@
-.background {
+.primary-color {
+    -fx-background-color: #4A4453;
+    -fx-background-radius: 10;
+}
+
+.secondary-color{
     -fx-background-color: #2F1E63;
+    -fx-background-radius: 10 0 10 0;
+}
+
+.sidebar {
     -fx-background-radius: 10;
 }
 
