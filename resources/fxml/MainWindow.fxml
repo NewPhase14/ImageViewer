@@ -398,19 +398,19 @@
       </ScrollPane>
    </left>
    <top>
-      <HBox fx:id="hBoxTopBar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="900.0" styleClass="title-bar" BorderPane.alignment="CENTER">
+      <HBox fx:id="hBoxTopBar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="900.0" styleClass="title-bar" BorderPane.alignment="TOP_LEFT">
          <children>
             <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../icons/CuteOtter.png" />
                </image>
                <HBox.margin>
-                  <Insets left="10.0" top="5.0" />
+                  <Insets bottom="5.0" left="10.0" right="5.0" top="10.0" />
                </HBox.margin>
             </ImageView>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title-bar-text" text="Photos">
                <HBox.margin>
-                  <Insets top="5.0" />
+                  <Insets top="10.0" />
                </HBox.margin>
                <font>
                   <Font size="14.0" />
@@ -457,7 +457,7 @@
                   <Insets bottom="5.0" left="10.0" top="5.0" />
                </HBox.margin>
             </Button>
-            <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minimizeButton" prefHeight="25.0" prefWidth="25.0" styleClass="minimize-button">
+            <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minimizeButton" prefHeight="35.0" prefWidth="35.0" styleClass="minimize-button">
                <graphic>
                   <ImageView fitHeight="5.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true" styleClass="minimize-button">
                      <image>
@@ -469,7 +469,7 @@
                   <Insets left="27.0" />
                </HBox.margin>
             </Button>
-            <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#closeButton" prefHeight="25.0" prefWidth="25.0" styleClass="close-button">
+            <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#closeButton" prefHeight="35.0" prefWidth="35.0" styleClass="close-button">
                <graphic>
                   <ImageView fitHeight="15.0" fitWidth="12.0" pickOnBounds="true" styleClass="close-button">
                      <image>
