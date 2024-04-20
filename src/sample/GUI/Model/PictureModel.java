@@ -23,5 +23,6 @@ public class PictureModel {
 
     public void addPicture(Picture picture){
         obsPictureList.add(picture);
+        pictureManager.addPicture(picture);
     }
 }

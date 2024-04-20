@@ -18,6 +18,6 @@ public class Picture {
 
     @Override
     public String toString() {
-        return "Title: " + title;
+        return title;
     }
 }
