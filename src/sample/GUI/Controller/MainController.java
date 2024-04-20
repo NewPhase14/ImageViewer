@@ -13,20 +13,26 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import sample.BE.Picture;
 import sample.GUI.Main;
 import sample.GUI.Model.PictureModel;
 
 
+import javax.imageio.ImageIO;
+import javax.swing.filechooser.FileSystemView;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.nio.file.FileAlreadyExistsException;
+import java.nio.file.Files;
 import java.util.ResourceBundle;
 
 public class MainController implements Initializable {
 
     public TextField txtSearch;
     @FXML
-    private ListView lstPictures;
+    private ListView<Picture> lstPictures;
 
     @FXML
     private HBox hBoxTopBar;
@@ -41,11 +47,13 @@ public class MainController implements Initializable {
     public MainController() {
         pictureModel = new PictureModel();
     }
+    private File selectedFile;
+
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         draggableWindow();
-
         lstPictures.setItems(pictureModel.getObsPictureList());
 
         txtSearch.textProperty().addListener((observable, oldValue, newValue) -> {
@@ -55,12 +63,12 @@ public class MainController implements Initializable {
                 throw new RuntimeException(e);
             }
         });
-
         try {
             openAllPhotos();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        
     }
 
     public void minimizeButton(ActionEvent actionEvent) {
@@ -93,20 +101,26 @@ public class MainController implements Initializable {
         mainBorder.setCenter(vbox);
     }
 
-    public void addImage(ActionEvent actionEvent) {
-        Stage s = new Stage();
+    public void addImage(ActionEvent actionEvent) throws IOException {
         FileChooser fileChooser = new FileChooser();
-        fileChooser.setTitle("Open Image File");
-        fileChooser.setInitialDirectory(new File("resources\\data\\pictures"));
-        fileChooser.getExtensionFilters().addAll(
-                new FileChooser.ExtensionFilter("Image Files", "*.jpg", "*.png", "*.jpeg")
-        );
 
-        File file = fileChooser.showSaveDialog(s);
+        FileChooser.ExtensionFilter extensionFilter = new FileChooser.ExtensionFilter("Image files (*.jpeg, *.png, *.jpg)" , "*.png","*.jpeg","*.png");
+        fileChooser.getExtensionFilters().add(extensionFilter);
 
-        if (file != null) {
+        fileChooser.setTitle("Choose image file");
+        fileChooser.setInitialDirectory(new File(System.getProperty("user.dir")));
 
+        selectedFile = fileChooser.showOpenDialog(null);
+
+        if (selectedFile != null) {
+            try {
+                File newFile = new File("/Users/jeppebaden/Desktop/ImageViewer/resources/data/pictures/" + selectedFile.getName());
+                Files.copy(selectedFile.toPath(), newFile.toPath());
+                Picture picture = new Picture(selectedFile.getName(), newFile.getPath());
+                lstPictures.getItems().add(picture);
+            } catch (FileAlreadyExistsException e) {
+                System.out.println("File already exists");
+            }
         }
     }
-
 }
