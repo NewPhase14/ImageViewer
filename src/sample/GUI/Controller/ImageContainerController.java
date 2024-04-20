@@ -1,6 +1,7 @@
 package sample.GUI.Controller;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -9,6 +10,8 @@ import java.io.FileNotFoundException;
 
 public class ImageContainerController {
 
+    @FXML
+    public Label txtTitle;
     @FXML
     private ImageView imgPicture;
 
