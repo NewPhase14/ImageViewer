@@ -114,7 +114,7 @@ public class MainController implements Initializable {
 
         if (selectedFile != null) {
             try {
-                File newFile = new File("/Users/jeppebaden/Desktop/ImageViewer/resources/data/pictures/" + selectedFile.getName());
+                File newFile = new File("resources/data/pictures/" + selectedFile.getName());
                 Files.copy(selectedFile.toPath(), newFile.toPath());
                 Picture picture = new Picture(selectedFile.getName(), newFile.getPath());
                 lstPictures.getItems().add(picture);
@@ -123,4 +123,5 @@ public class MainController implements Initializable {
             }
         }
     }
+
 }
