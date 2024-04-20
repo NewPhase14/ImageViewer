@@ -6,20 +6,21 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 
+
+import javafx.scene.control.Alert;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import sample.BE.Picture;
 import sample.GUI.Main;
 import sample.GUI.Model.PictureModel;
 
-import java.awt.image.BufferedImage;
+
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -29,12 +30,15 @@ import java.util.ResourceBundle;
 
 public class MainController implements Initializable {
 
+    @FXML
     public TextField txtSearch;
+
     @FXML
     private ListView<Picture> lstPictures;
 
     @FXML
     private HBox hBoxTopBar;
+
     private double mousePosX = 0;
     private double mousePosY = 0;
 
@@ -48,7 +52,6 @@ public class MainController implements Initializable {
     public MainController() {
         pictureModel = new PictureModel();
     }
-
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -108,7 +111,7 @@ public class MainController implements Initializable {
                 Picture picture = new Picture(selectedFile.getName(), newFile.getPath());
                 lstPictures.getItems().add(picture);
             } catch (FileAlreadyExistsException e) {
-                System.out.println("File already exists");
+                alertBox("File already exists", "File is already present in the folder"+ '\n' + e);
             }
         }
     }
@@ -127,4 +130,11 @@ public class MainController implements Initializable {
         imageView.setImage(image);
     }
 
+    private void alertBox(String title, String message){
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
+    }
 }

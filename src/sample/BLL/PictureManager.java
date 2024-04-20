@@ -2,10 +2,10 @@ package sample.BLL;
 
 
 import sample.BE.Picture;
+import sample.BLL.util.PixelCounter;
 import sample.BLL.util.Searcher;
 import sample.DAL.PictureDAO;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class PictureManager {
@@ -14,9 +14,12 @@ public class PictureManager {
 
     private final PictureDAO pictureDAO;
 
+    private PixelCounter pixelCounter;
+
     public PictureManager() {
         pictureDAO = new PictureDAO();
         searcher = new Searcher();
+        pixelCounter = new PixelCounter();
     }
 
     public List<Picture> searchPicture(String query){
@@ -26,5 +29,17 @@ public class PictureManager {
 
     public List<Picture> getAllPictures(){
         return pictureDAO.getAllPictures();
+    }
+
+    public int redPixelCount(Picture p){
+        return pixelCounter.imageRedCounter(p);
+    }
+
+    public int greenPixelCount(Picture p){
+        return pixelCounter.imageGreenCounter(p);
+    }
+
+    public int bluePixelCount(Picture p){
+        return pixelCounter.imageBlueCounter(p);
     }
 }

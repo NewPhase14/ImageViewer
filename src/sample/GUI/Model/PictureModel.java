@@ -16,6 +16,7 @@ public class PictureModel {
 
      public PictureModel() {
          pictureManager = new PictureManager();
+
          obsPictureList = FXCollections.observableArrayList();
          obsPictureList.addAll(pictureManager.getAllPictures());
      }
@@ -28,6 +29,18 @@ public class PictureModel {
 
      public ObservableList<Picture> getObsPictureList() {
          return obsPictureList;
+     }
+
+     public int redPixelCount(Picture p){
+         return pictureManager.redPixelCount(p);
+     }
+
+     public int greenPixelCount(Picture p){
+         return pictureManager.greenPixelCount(p);
+     }
+
+     public int bluePixelCount(Picture p){
+         return pictureManager.bluePixelCount(p);
      }
 
 }
