@@ -12,7 +12,6 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import sample.BE.Picture;
 import sample.GUI.Main;
 import sample.GUI.Model.PictureModel;
 
@@ -36,15 +35,12 @@ public class MainController implements Initializable {
 
     private PictureModel pictureModel;
 
-    public MainController() {
-        pictureModel = new PictureModel();
-    }
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         draggableWindow();
 
-        lstPictures.setItems(pictureModel.getObsPictureList());
 
         try {
             openAllPhotos();
@@ -95,8 +91,7 @@ public class MainController implements Initializable {
         File file = fileChooser.showSaveDialog(s);
 
         if (file != null) {
-            Picture picture = new Picture(file.getName());
-            pictureModel.addPicture(picture);
+
         }
     }
 
