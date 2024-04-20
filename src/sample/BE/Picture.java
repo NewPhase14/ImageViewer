@@ -1,23 +1,20 @@
 package sample.BE;
 
 public class Picture {
+    private final String name;
+    private final String path;
 
-    private String title;
-
-    public Picture(String title) {
-        this.title = title;
+    public Picture(String name, String path) {
+        this.name = name;
+        this.path = path;
     }
 
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+    public String getPath() {
+        return path;
 
-    @Override
-    public String toString() {
-        return title;
     }
 }
