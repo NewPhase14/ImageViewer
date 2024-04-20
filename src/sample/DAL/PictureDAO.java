@@ -12,11 +12,12 @@ public class PictureDAO {
         File[] directory = new File("resources/data/pictures").listFiles();
         List<Picture> picturelist = new ArrayList<>();
 
-        for (File file : directory) {
-            Picture p = new Picture(file.getName(), file.getPath());
-            picturelist.add(p);
+        if (directory != null) {
+            for (File file : directory) {
+                Picture p = new Picture(file.getName(), file.getPath());
+                picturelist.add(p);
+            }
         }
-
         return picturelist;
     }
 }

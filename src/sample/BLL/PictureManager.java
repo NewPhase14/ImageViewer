@@ -10,9 +10,9 @@ import java.util.List;
 
 public class PictureManager {
 
-    private Searcher searcher;
+    private final Searcher searcher;
 
-    private PictureDAO pictureDAO;
+    private final PictureDAO pictureDAO;
 
     public PictureManager() {
         pictureDAO = new PictureDAO();
@@ -21,8 +21,7 @@ public class PictureManager {
 
     public List<Picture> searchPicture(String query){
         List<Picture> allPictures = getAllPictures();
-        List<Picture> searchResult = searcher.search(allPictures, query);
-        return searchResult;
+        return searcher.search(allPictures, query);
     }
 
     public List<Picture> getAllPictures(){

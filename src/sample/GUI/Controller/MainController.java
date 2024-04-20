@@ -8,6 +8,8 @@ import javafx.scene.Node;
 
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -17,9 +19,6 @@ import sample.BE.Picture;
 import sample.GUI.Main;
 import sample.GUI.Model.PictureModel;
 
-
-import javax.imageio.ImageIO;
-import javax.swing.filechooser.FileSystemView;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -41,21 +40,25 @@ public class MainController implements Initializable {
 
     @FXML
     private BorderPane mainBorder;
+    @FXML
+    private ImageView imageView;
 
-    private PictureModel pictureModel;
+    private final PictureModel pictureModel;
 
     public MainController() {
         pictureModel = new PictureModel();
     }
-    private File selectedFile;
-
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         draggableWindow();
+        txtSearchListener();
+        listViewListener();
         lstPictures.setItems(pictureModel.getObsPictureList());
+    }
 
+    public void txtSearchListener() {
         txtSearch.textProperty().addListener((observable, oldValue, newValue) -> {
             try {
                 pictureModel.searchPicture(newValue);
@@ -63,12 +66,6 @@ public class MainController implements Initializable {
                 throw new RuntimeException(e);
             }
         });
-        try {
-            openAllPhotos();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        
     }
 
     public void minimizeButton(ActionEvent actionEvent) {
@@ -93,14 +90,6 @@ public class MainController implements Initializable {
         });
     }
 
-    @FXML
-    private void openAllPhotos() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/PicturePage.fxml"));
-        VBox vbox = fxmlLoader.load();
-
-        mainBorder.setCenter(vbox);
-    }
-
     public void addImage(ActionEvent actionEvent) throws IOException {
         FileChooser fileChooser = new FileChooser();
 
@@ -110,7 +99,7 @@ public class MainController implements Initializable {
         fileChooser.setTitle("Choose image file");
         fileChooser.setInitialDirectory(new File(System.getProperty("user.dir")));
 
-        selectedFile = fileChooser.showOpenDialog(null);
+        File selectedFile = fileChooser.showOpenDialog(null);
 
         if (selectedFile != null) {
             try {
@@ -122,6 +111,20 @@ public class MainController implements Initializable {
                 System.out.println("File already exists");
             }
         }
+    }
+
+    private void listViewListener() {
+        lstPictures.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue != null) {
+                setImageView(newValue);
+            }
+        });
+    }
+
+    @FXML
+    private void setImageView(Picture picture) {
+        Image image = new Image(new File(picture.getPath()).toURI().toString());
+        imageView.setImage(image);
     }
 
 }
