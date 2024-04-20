@@ -7,6 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -23,8 +24,10 @@ import java.util.ResourceBundle;
 
 public class MainController implements Initializable {
 
+    public TextField txtSearch;
     @FXML
     private ListView lstPictures;
+
     @FXML
     private HBox hBoxTopBar;
     private double mousePosX = 0;
@@ -35,12 +38,23 @@ public class MainController implements Initializable {
 
     private PictureModel pictureModel;
 
-
+    public MainController() {
+        pictureModel = new PictureModel();
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         draggableWindow();
 
+        lstPictures.setItems(pictureModel.getObsPictureList());
+
+        txtSearch.textProperty().addListener((observable, oldValue, newValue) -> {
+            try {
+                pictureModel.searchPicture(newValue);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        });
 
         try {
             openAllPhotos();
@@ -83,7 +97,7 @@ public class MainController implements Initializable {
         Stage s = new Stage();
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Open Image File");
-        fileChooser.setInitialDirectory(new File("data\\pictures"));
+        fileChooser.setInitialDirectory(new File("resources\\data\\pictures"));
         fileChooser.getExtensionFilters().addAll(
                 new FileChooser.ExtensionFilter("Image Files", "*.jpg", "*.png", "*.jpeg")
         );
