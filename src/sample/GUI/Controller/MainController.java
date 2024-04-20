@@ -1,13 +1,16 @@
 package sample.GUI.Controller;
 
+import javafx.application.Platform;
+import javafx.collections.ObservableList;
+import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 
 
 import javafx.scene.control.Alert;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -48,6 +51,17 @@ public class MainController implements Initializable {
     private ImageView imageView;
 
     private final PictureModel pictureModel;
+    @FXML
+    private Label lblRed;
+    @FXML
+    private Label lblGreen;
+    @FXML
+    private Label lblBlue;
+
+    private int queueCount = 0;
+
+    private Thread thread;
+
 
     public MainController() {
         pictureModel = new PictureModel();
@@ -128,6 +142,7 @@ public class MainController implements Initializable {
     private void setImageView(Picture picture) {
         Image image = new Image(new File(picture.getPath()).toURI().toString());
         imageView.setImage(image);
+        setColorsOfImage(picture);
     }
 
     private void alertBox(String title, String message){
@@ -136,5 +151,45 @@ public class MainController implements Initializable {
         alert.setHeaderText(null);
         alert.setContentText(message);
         alert.showAndWait();
+    }
+
+    @FXML
+    private void btnStartSlideshow(ActionEvent actionEvent) {
+        ObservableList<Picture> observablePictures = pictureModel.getObsPictureList();
+        Task task = new Task<Void>() {
+            @Override
+            public Void call() throws Exception {
+                for (int i = 0; i < observablePictures.size(); i++) {
+                    Platform.runLater(new Runnable() {
+                        @Override
+                        public void run() {
+                            setImageView(observablePictures.get(queueCount));
+                            queueCount++;
+                            if (queueCount >= observablePictures.size()) {
+                                queueCount = 0;
+                            }
+                        }
+                    });
+
+                    Thread.sleep(2000);
+                }
+
+                return null;
+            }
+        };
+        thread = new Thread(task);
+        thread.setDaemon(true);
+        thread.start();
+    }
+
+    @FXML
+    private void btnStopSlideshow(ActionEvent actionEvent) {
+        thread.interrupt();
+    }
+
+    private void setColorsOfImage(Picture p) {
+        lblRed.setText(String.valueOf(pictureModel.getRedPixelCount(p)));
+        lblGreen.setText(String.valueOf(pictureModel.getGreenPixelCount(p)));
+        lblBlue.setText(String.valueOf(pictureModel.getBluePixelCount(p)));
     }
 }

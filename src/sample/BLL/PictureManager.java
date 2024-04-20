@@ -31,15 +31,15 @@ public class PictureManager {
         return pictureDAO.getAllPictures();
     }
 
-    public int redPixelCount(Picture p){
+    public int getRedPixelCount(Picture p){
         return pixelCounter.imageRedCounter(p);
     }
 
-    public int greenPixelCount(Picture p){
+    public int getGreenPixelCount(Picture p){
         return pixelCounter.imageGreenCounter(p);
     }
 
-    public int bluePixelCount(Picture p){
+    public int getBluePixelCount(Picture p){
         return pixelCounter.imageBlueCounter(p);
     }
 }

@@ -122,7 +122,7 @@
                   </HBox>
                   <HBox alignment="TOP_RIGHT" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="320.0">
                      <children>
-                        <Button fx:id="btnStartSlideshow" minHeight="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="image-buttons">
+                        <Button minHeight="-Infinity" mnemonicParsing="false" onAction="#btnStartSlideshow" prefHeight="40.0" prefWidth="40.0" styleClass="image-buttons">
                            <graphic>
                               <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -134,7 +134,7 @@
                               <Insets />
                            </HBox.margin>
                         </Button>
-                        <Button fx:id="btnStopSlideshow" minHeight="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="image-buttons">
+                        <Button minHeight="-Infinity" mnemonicParsing="false" onAction="#btnStopSlideshow" prefHeight="40.0" prefWidth="40.0" styleClass="image-buttons">
                            <graphic>
                               <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                  <image>

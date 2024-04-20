@@ -31,16 +31,16 @@ public class PictureModel {
          return obsPictureList;
      }
 
-     public int redPixelCount(Picture p){
-         return pictureManager.redPixelCount(p);
+     public int getRedPixelCount(Picture p){
+         return pictureManager.getRedPixelCount(p);
      }
 
-     public int greenPixelCount(Picture p){
-         return pictureManager.greenPixelCount(p);
+     public int getGreenPixelCount(Picture p){
+         return pictureManager.getGreenPixelCount(p);
      }
 
-     public int bluePixelCount(Picture p){
-         return pictureManager.bluePixelCount(p);
+     public int getBluePixelCount(Picture p){
+         return pictureManager.getBluePixelCount(p);
      }
 
 }

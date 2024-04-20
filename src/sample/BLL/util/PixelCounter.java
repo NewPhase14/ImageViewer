@@ -8,7 +8,7 @@ import sample.BE.Picture;
 public class PixelCounter {
 
     public int imageRedCounter(Picture p){
-        Image image = new Image(p.getPath());
+        Image image = new Image("file:" + p.getPath());
 
         PixelReader pr = image.getPixelReader();
 
@@ -34,7 +34,7 @@ public class PixelCounter {
     }
 
     public int imageGreenCounter(Picture p){
-        Image image = new Image(p.getPath());
+        Image image = new Image("file:" + p.getPath());
 
         PixelReader pr = image.getPixelReader();
 
@@ -60,7 +60,7 @@ public class PixelCounter {
     }
 
     public int imageBlueCounter(Picture p){
-        Image image = new Image(p.getPath());
+        Image image = new Image("file:" + p.getPath());
 
         PixelReader pr = image.getPixelReader();
 
