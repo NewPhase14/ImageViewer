@@ -105,19 +105,19 @@
                   <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="320.0">
                      <children>
                         <Label styleClass="label-secondary" text="Red: " />
-                        <Label fx:id="lblRed" alignment="CENTER" prefWidth="30.0" styleClass="label-secondary" text="255">
+                        <Label fx:id="lblRed" alignment="CENTER" prefWidth="40.0" styleClass="label-secondary" text="0">
                            <HBox.margin>
                               <Insets right="2.0" />
                            </HBox.margin>
                         </Label>
                         <Label styleClass="label-secondary" text="Green: " />
-                        <Label fx:id="lblGreen" alignment="CENTER" prefWidth="30.0" styleClass="label-secondary" text="255">
+                        <Label fx:id="lblGreen" alignment="CENTER" prefWidth="40.0" styleClass="label-secondary" text="0">
                            <HBox.margin>
                               <Insets right="2.0" />
                            </HBox.margin>
                         </Label>
                         <Label styleClass="label-secondary" text="Blue: " />
-                        <Label fx:id="lblBlue" alignment="CENTER" prefWidth="30.0" styleClass="label-secondary" text="255" />
+                        <Label fx:id="lblBlue" alignment="CENTER" prefWidth="40.0" styleClass="label-secondary" text="0" />
                      </children>
                   </HBox>
                   <HBox alignment="TOP_RIGHT" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="320.0">
